@@ -4,12 +4,22 @@ const API = axios.create({
   baseURL: "http://localhost:4000/api",
 });
 
-// Fetch slots
-export const fetchSlots = (onlyAvailable = false) =>
-  API.get(`/slots?onlyAvailable=${onlyAvailable}`);
+// Add token automatically if present
+API.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
 
-// Book slot
-export const bookSlot = (slotId, name, phone) =>
-  API.post("/book", { slotId, name, phone });
+// Auth
+export const signup = (name, email, password) =>
+  API.post("/auth/signup", { name, email, password });
+
+export const login = (email, password) =>
+  API.post("/auth/login", { email, password });
+
+// Slots
+export const fetchSlots = () => API.get("/slots");
+export const bookSlot = (slotId) => API.post("/book", { slotId });
 
 export default API;
