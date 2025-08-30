@@ -20,3 +20,13 @@
    cd backend
    npm install
    npm run dev
+3. Run frontend:
+   cd frontend
+   npm install
+   npm start
+
+## Challenges
+1. Handling JWT + localStorage sync
+2. Making booking state update instantly after API call
+3. Deploying backend on Render (cold start issues)
+4. Solved by-> keeping APIs lightweight, using Axios interceptors, and refreshing slots after booking.
