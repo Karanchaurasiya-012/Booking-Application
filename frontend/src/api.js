@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://booking-application-ah21.onrender.com",
+  baseURL: "https://booking-application-ah21.onrender.com/api",
 });
 
 // Add token automatically if present
