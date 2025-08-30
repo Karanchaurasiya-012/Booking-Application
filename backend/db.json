@@ -1,0 +1,32 @@
+{
+  "slots": [
+    {
+      "id": 1,
+      "time": "2025-09-01T08:00:00.000Z",
+      "durationMins": 60,
+      "available": false,
+      "booking": {
+        "name": "Vishal",
+        "phone": "2314569879",
+        "bookedAt": "2025-08-30T10:14:49.830Z"
+      }
+    },
+    {
+      "id": 2,
+      "time": "2025-09-01T09:00:00.000Z",
+      "durationMins": 60,
+      "available": false,
+      "booking": {
+        "name": "Karan",
+        "phone": "0123456789",
+        "bookedAt": "2025-08-30T09:55:06.073Z"
+      }
+    },
+    {
+      "id": 3,
+      "time": "2025-09-01T10:00:00.000Z",
+      "durationMins": 60,
+      "available": true
+    }
+  ]
+}
